@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+
         <title>James Kerr - Words and Beauty</title>
         <meta name="description" content="My name is James Kerr. I'm a web developer with a passion for interactive, data-driven communication.">
 
@@ -8,6 +10,12 @@
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
         <link rel="manifest" href="img/site.webmanifest">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
 
     <body>
@@ -15,15 +23,15 @@
         <header>
             <img src="http://via.placeholder.com/200x70" alt="">
             <nav>
-                <ul role="menubar">
+                <ul role="menubar" class="navigation-list">
                     <li role="presentation">
-                        <a href="index.html" role="menuitem">Home</a>
+                        <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
                     </li>
                     <li role="presentation">
-                        <a href="about.html" role="menuitem">About Me</a>
+                        <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
                     </li>
                     <li role="presentation">
-                        <a href="contact.html" role="menuitem">Contact</a>
+                        <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
                     </li>
                 </ul>
             </nav>
