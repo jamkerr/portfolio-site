@@ -7,12 +7,25 @@ Secondary Color (Pink): #faf;
  */
 
 /* STRUCTURE */
+
+* {
+    box-sizing: border-box;
+}
+
 body, header, footer {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.6;
     color: #2b2b2b;
+    background-color: whitesmoke;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    margin: 0;
 }
 
 h1 {
@@ -83,6 +96,86 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 
 /* NAVIGATION */
+.page-header {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.page-header__item:first-child {
+    max-width: 100px;
+    max-height: 100px;
+}
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
 .navigation-list__item--active {
     text-decoration: none;
 }
+
+/* FOOTER */
+.page-footer {
+    margin-top: auto;
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* IMAGES */
+.profile__portrait {
+    float: left;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+/* MAIN CONTENT */
+main {
+    flex: 1 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.profile {
+    max-width: 700px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid__item {
+    background-color: #faf;
+    padding: 20px;
+}
+
+.grid__item:last-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }

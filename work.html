@@ -6,10 +6,10 @@
         <title>James Kerr - Words and Beauty</title>
         <meta name="description" content="My name is James Kerr. I'm a web developer with a passion for interactive, data-driven communication.">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-        <link rel="manifest" href="img/favicon/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/site.webmanifest">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,13 +25,13 @@
             <nav class="main-navigation page-header__item">
                 <ul role="menubar" class="navigation-list">
                     <li role="presentation">
-                        <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+                        <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
                     </li>
                     <li role="presentation">
                         <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
                     </li>
                     <li role="presentation">
-                        <a href="work.html" role="menuitem" class="navigation-list__item">Projects</a>
+                        <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Projects</a>
                     </li>
                     <li role="presentation">
                         <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
@@ -43,12 +43,30 @@
 
         <!-- BEGIN MAIN CONTENT -->
         <main>
-            <section class="profile">
-                <img src="img/james-kerr-profile-picture.jpg" class="profile__portrait" alt="A photograph of James Kerr">
-                <h1>Hello World!</h1>
-                <p>My name is <strong>James Kerr</strong>. I'm a <span>web</span> developer with a broad background in tech and research.</p>
-                <p>I have a passion for interactive, data-driven communication.</p>
-                <a href="https://github.com/jamkerr/">Check out some of my code</a>
+            <section>
+                <h1>Work</h1>
+                <div class="grid">
+                    <div class="grid__item">
+                        <h1>Sunburst Smorgasbord</h1>
+                        <p>A relationship anarchy smorgasbord in the style of a coffee flavour wheel. This was the first project I really used JavaScript in. I'm still involved in updating and improving it.</p>
+                        <a href="https://smorgasbord.plusx.black/">Sunburst Smorgasbord</a>
+                    </div>
+                    <div class="grid__item">
+                        <h1>Artificial Artist</h1>
+                        <p>A website to generate art using AI and have it printed out. I was involved in an early iteration of the website, and I continue to be involved in strategy.</p>
+                        <a href="https://artificial-artist.org">Artificial Artist</a>
+                    </div>
+                    <div class="grid__item">
+                        <h1>SumOne</h1>
+                        <p>An information management system for hospitals. I was a project founder and worked mostly on UX, marketing, and business operations.</p>
+                        <a href="https://sum-one.org/">SumOne</a>
+                    </div>
+                    <div class="grid__item">
+                        <h1>More coming soon...</h1>
+                        <p></p>
+                        <a href="#"></a>
+                    </div>
+                </div>
             </section>
         </main>
         <!-- END MAIN CONTENT -->
