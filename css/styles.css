@@ -55,7 +55,7 @@ a {
 
 a:visited {
     /* visited link */
-    color: #606;
+    color: #faf;
 }
 
 a:hover, a:focus {
@@ -65,7 +65,7 @@ a:hover, a:focus {
 
 a:active {
     /* selected link */
-    color: #faf;
+    color: #606;
 }
 
 
@@ -85,6 +85,7 @@ button, .button {
     border-radius: 3px;
     /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 0.2s opacity;
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
@@ -99,7 +100,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 .page-header {
     display: flex;
     width: 100%;
-    margin: 0;
+    margin: auto;
     padding: 20px;
     position: sticky;
     top: 0;
@@ -131,6 +132,7 @@ button:hover, button:focus, .button:hover, .button:focus {
     text-decoration: none;
 }
 
+
 /* FOOTER */
 .page-footer {
     margin-top: auto;
@@ -150,6 +152,14 @@ button:hover, button:focus, .button:hover, .button:focus {
     border-radius: 50%;
 }
 
+.berlin-illustration {
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+
 /* MAIN CONTENT */
 main {
     flex: 1 0 auto;
@@ -160,6 +170,11 @@ main {
 
 .profile {
     max-width: 700px;
+}
+
+.about-me {
+    text-align: center;
+    margin: auto;
 }
 
 .grid {
@@ -178,4 +193,78 @@ main {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
-  }
+}
+
+/* ANIMATIONS */
+@keyframes color-change {
+    0% {
+      fill: #edc655;
+    }
+    50% {
+      fill: #fcffad;
+    }
+    100% {
+      fill: #f76414;
+    }
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+    to {
+        transform: translate(200px, 50px);
+    }
+}
+
+@keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 48px);
+    }
+    to {
+      transform: translate(100px, 48px);
+    }
+}
+
+.sun {
+    animation: 4s color-change infinite alternate linear;
+}
+
+.cloud-big {
+    animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-small {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* RESPONSIVE */
+
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+
+
+/* fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes
+fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}.animate__fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}@-webkit-keyframes */
