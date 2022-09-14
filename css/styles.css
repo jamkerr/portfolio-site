@@ -126,20 +126,21 @@ button:hover, button:focus, .button:hover, .button:focus {
 .navigation-list li {
     display: inline-block;
     margin-left: 15px;
+    position: relative;
 }
 
-.navigation-list__item--active {
+.navigation-list__item {
     text-decoration: none;
 }
 
-/* Top and Bottom borders go out */
+/* Nav bar transition: Top and Bottom borders go out */
 .navigation-list__item:before, .navigation-list__item:after
 {
     position: absolute;
     left: 0px;
     width: 100%;
     height: 2px;
-    background: #FFF;
+    background: #faf;
     content: "";
     opacity: 0;
     transition: all 0.3s;
@@ -162,6 +163,12 @@ button:hover, button:focus, .button:hover, .button:focus {
     opacity: 1;
     transform: translateY(0px);
 }
+
+.navigation-list__item--active:before, .navigation-list__item--active:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+/* End Nav bar transition */
 
 /* FOOTER */
 .page-footer {
