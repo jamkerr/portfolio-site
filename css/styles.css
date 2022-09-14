@@ -1,10 +1,21 @@
-/*
-Colors used
+/* VARIABLES */
 
-Text Color (Dark Gray): #2b2b2b;
-Primary Color (Purple): #a0a;
-Secondary Color (Pink): #faf;
- */
+:root {
+    /* COLORS */
+    --primary-color: #a0a;
+    --primary-color-darker: #606;
+    --secondary-color: #faf;
+    --text-color-dark: #2b2b2b;
+    --text-color-light: #f5f5f5;
+    --background-light: #f5f5f5;
+    --border-dark: #0000004d;
+
+    /* FONT */
+    --font-heavy: 700;
+    --font-size-normal: 18px;
+    --font-size-big: 24px;
+    --font-size-biggest: 30px;
+}
 
 /* STRUCTURE */
 
@@ -15,10 +26,10 @@ Secondary Color (Pink): #faf;
 body, header, footer {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: var(--font-size-normal);
     line-height: 1.6;
-    color: #2b2b2b;
-    background-color: whitesmoke;
+    color: var(--text-color-dark);
+    background-color: var(--background-light);
 }
 
 body {
@@ -29,18 +40,17 @@ body {
 }
 
 h1 {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: var(--font-size-biggest);
+    font-weight: var(--font-heavy);
 }
 
 h2 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: var(--font-size-big);
+    font-weight: var(--font-heavy);
 }
 
 h3 {
-    font-size: 18px;
-    font-weight: 700;
+    font-weight: var(--font-heavy);
 }
 
 /* RESET BROWSER DEFAULTS */
@@ -50,12 +60,12 @@ input, texture, select, button {
 
 /* LINKS */
 a {
-    color: #a0a;
+    color: var(--primary-color);
 }
 
 a:visited {
     /* visited link */
-    color: #faf;
+    color: var(--secondary-color);
 }
 
 a:hover, a:focus {
@@ -65,7 +75,7 @@ a:hover, a:focus {
 
 a:active {
     /* selected link */
-    color: #606;
+    color: var(--primary-color-darker);
 }
 
 
@@ -75,16 +85,16 @@ button, .button {
     border: none;
     /* takes the font from the outer container */
     font-family: inherit;
-    font-weight: 700;
+    font-weight: var(--font-heavy);
     /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-    background-color: #a0a;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
     text-decoration: none;
-    /*adds spacing to the button (this will be discussed more in-depth later) */
+    /*adds spacing to the button */
     padding: 10px;
     border-radius: 3px;
     /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid var(--border-dark);
     transition: 0.2s opacity;
 }
 
@@ -140,7 +150,7 @@ button:hover, button:focus, .button:hover, .button:focus {
     left: 0px;
     width: 100%;
     height: 2px;
-    background: #faf;
+    background: var(--secondary-color);
     content: "";
     opacity: 0;
     transition: all 0.3s;
@@ -221,7 +231,7 @@ main {
 }
 
 .grid__item {
-    background-color: #faf;
+    background-color: var(--secondary-color);
     padding: 20px;
 }
 
@@ -235,13 +245,13 @@ main {
 /* ANIMATIONS */
 @keyframes color-change {
     0% {
-      fill: #edc655;
+      fill: var(--secondary-color);
     }
     50% {
-      fill: #fcffad;
+      fill: var(--primary-color);
     }
     100% {
-      fill: #f76414;
+      fill: var(--primary-color-darker);
     }
 }
 
@@ -264,7 +274,7 @@ main {
 }
 
 .sun {
-    animation: 4s color-change infinite alternate linear;
+    animation: 10s color-change infinite alternate linear;
 }
 
 .cloud-big {
@@ -298,7 +308,7 @@ main {
         grid-row: auto / auto;
     }
     h1 {
-        font-size: 22px;
+        font-size: var(--font-size-big);
     }
 }
 

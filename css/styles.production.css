@@ -1,0 +1,434 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
+
+/* VARIABLES */
+
+:root {
+    /* COLORS */
+
+    /* FONT */
+}
+
+/* STRUCTURE */
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2b2b2b;
+    background-color: #f5f5f5;
+}
+
+header {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2b2b2b;
+    background-color: #f5f5f5;
+}
+
+footer {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2b2b2b;
+    background-color: #f5f5f5;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height:100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+/* RESET BROWSER DEFAULTS */
+input, texture, select, button {
+    font-family: inherit;
+}
+
+/* LINKS */
+a {
+    color: #a0a;
+}
+
+a:visited {
+    /* visited link */
+    color: #faf;
+}
+
+a:hover, a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+}
+
+a:active {
+    /* selected link */
+    color: #606;
+}
+
+
+/* BUTTONS */
+button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    font-weight: 700;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: #a0a;
+    color: #f5f5f5;
+    text-decoration: none;
+    /*adds spacing to the button */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid #0000004d;
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity;
+}
+.button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    font-weight: 700;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: #a0a;
+    color: #f5f5f5;
+    text-decoration: none;
+    /*adds spacing to the button */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid #0000004d;
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+}
+
+
+/* NAVIGATION */
+.page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.page-header__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 200px;
+            flex: 0 1 200px;
+}
+
+.page-header__item:first-child {
+    max-width: 100px;
+    max-height: 100px;
+}
+.page-header__item:last-child {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+}
+
+.navigation-list__item {
+    text-decoration: none;
+}
+
+/* Nav bar transition: Top and Bottom borders go out */
+.navigation-list__item:before
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #faf;
+    content: "";
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.navigation-list__item:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #faf;
+    content: "";
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navigation-list__item:before
+{
+    top: 0px;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+}
+
+.navigation-list__item:after
+{
+    bottom: 0px;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+}
+
+.navigation-list__item:hover:before, .navigation-list__item:hover:after
+{
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+}
+
+.navigation-list__item--active:before, .navigation-list__item--active:after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+}
+/* End Nav bar transition */
+
+/* FOOTER */
+.page-footer {
+    margin-top: auto;
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+}
+
+/* IMAGES */
+.profile__portrait {
+    float: left;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+.berlin-illustration {
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* MAIN CONTENT */
+main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.profile {
+    max-width: 700px;
+}
+
+.about-me {
+    text-align: center;
+    margin: auto;
+}
+
+.grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid__item {
+    background-color: #faf;
+    padding: 20px;
+}
+
+.grid__item:last-child {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 3;
+    grid-column-end: 4;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-row-span: 1;
+    grid-row-end: 3;
+}
+
+/* ANIMATIONS */
+@-webkit-keyframes color-change {
+    0% {
+      fill: #faf;
+    }
+    50% {
+      fill: #a0a;
+    }
+    100% {
+      fill: #606;
+    }
+}
+@keyframes color-change {
+    0% {
+      fill: #faf;
+    }
+    50% {
+      fill: #a0a;
+    }
+    100% {
+      fill: #606;
+    }
+}
+
+@-webkit-keyframes cloud-move {
+    from {
+        -webkit-transform: translate(0, 50px);
+                transform: translate(0, 50px);
+    }
+    to {
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px);
+    }
+}
+
+@keyframes cloud-move {
+    from {
+        -webkit-transform: translate(0, 50px);
+                transform: translate(0, 50px);
+    }
+    to {
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px);
+    }
+}
+
+@-webkit-keyframes cloud-move-reverse {
+    from {
+      -webkit-transform: translate(446px, 48px);
+              transform: translate(446px, 48px);
+    }
+    to {
+      -webkit-transform: translate(100px, 48px);
+              transform: translate(100px, 48px);
+    }
+}
+
+@keyframes cloud-move-reverse {
+    from {
+      -webkit-transform: translate(446px, 48px);
+              transform: translate(446px, 48px);
+    }
+    to {
+      -webkit-transform: translate(100px, 48px);
+              transform: translate(100px, 48px);
+    }
+}
+
+.sun {
+    -webkit-animation: 10s color-change infinite alternate linear;
+            animation: 10s color-change infinite alternate linear;
+}
+
+.cloud-big {
+    -webkit-animation: 30s cloud-move infinite alternate linear;
+            animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-small {
+    -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+            animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* RESPONSIVE */
+
+@media all and (max-width: 500px) {
+    .grid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        -ms-grid-columns: 1fr 20px 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes
+fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}.animate__fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}@-webkit-keyframes */
