@@ -39,22 +39,21 @@ body {
     margin: 0;
 }
 
+h1, h2, h3, button, .button {
+    font-weight: var(--font-heavy);
+}
+
 h1 {
     font-size: var(--font-size-biggest);
-    font-weight: var(--font-heavy);
 }
 
 h2 {
     font-size: var(--font-size-big);
-    font-weight: var(--font-heavy);
-}
-
-h3 {
-    font-weight: var(--font-heavy);
 }
 
 /* RESET BROWSER DEFAULTS */
-input, texture, select, button {
+input, texture, select, button, .button {
+    /* takes the font from the outer container */
     font-family: inherit;
 }
 
@@ -83,9 +82,6 @@ a:active {
 button, .button {
     /* overwrites browser defaults and resets the border */
     border: none;
-    /* takes the font from the outer container */
-    font-family: inherit;
-    font-weight: var(--font-heavy);
     /* styles the background color, font color, and text decoration (underline, etc.) of the button */
     background-color: var(--primary-color);
     color: var(--text-color-light);
