@@ -60,23 +60,34 @@ input, texture, select, button, .button {
 /* LINKS */
 a {
     color: var(--primary-color);
+    text-decoration: none;
 }
 
 a:visited {
     /* visited link */
-    color: var(--secondary-color);
-}
-
-a:hover, a:focus {
-    /* No underlining when hovering over a link */
-    text-decoration: none;
+    color: var(--primary-color-darker);
 }
 
 a:active {
     /* selected link */
-    color: var(--primary-color-darker);
+    color: var(--text-color-dark);
 }
 
+.fancy-link {
+    /* background-image:linear-gradient(rgb(173, 119, 243),rgb(199, 21, 131)); */
+    background-image:linear-gradient(var(--primary-color), var(--primary-color-darker));
+    background-size:100% .1em;
+    background-position:0 90%;
+    background-repeat:no-repeat;
+    transition:all .3s ease-in;
+    padding:0 .25em
+}
+
+.fancy-link:hover, .fancy-link:focus {
+    background-size:100% 100%;
+    outline:none;
+    color: var(--text-color-light);
+}
 
 /* BUTTONS */
 button, .button {
@@ -99,6 +110,10 @@ button:hover, button:focus, .button:hover, .button:focus {
     cursor: pointer;
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
+}
+
+button:visited, .button:visited {
+    color: var(--secondary-color);
 }
 
 
@@ -218,6 +233,12 @@ main {
 .about-me {
     text-align: center;
     margin: auto;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
 .grid {
