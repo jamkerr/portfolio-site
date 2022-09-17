@@ -88,7 +88,11 @@ h2 {
 }
 
 /* RESET BROWSER DEFAULTS */
-input, texture, select, button, .button {
+input,
+texture,
+select,
+button,
+.button {
     /* takes the font from the outer container */
     font-family: inherit;
 }
@@ -118,7 +122,7 @@ a:active {
     background-repeat:no-repeat;
     -webkit-transition:all .3s ease-in;
     transition:all .3s ease-in;
-    padding:0 .25em;
+    padding:0 .25em
 }
 
 .fancy-link:hover {
@@ -163,7 +167,10 @@ button {
     transition: 0.2s opacity;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
     /* lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
     /* reduces the opacity of the button to 80% */
@@ -262,14 +269,16 @@ button:visited {
             transform: translateY(-10px);
 }
 
-.navigation-list__item:hover:before, .navigation-list__item:hover:after
+.navigation-list__item:hover:before,
+.navigation-list__item:hover:after
 {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
 }
 
-.navigation-list__item--active:before, .navigation-list__item--active:after {
+.navigation-list__item--active:before,
+.navigation-list__item--active:after {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
@@ -473,3 +482,4 @@ main {
         font-size: 24px;
     }
 }
+

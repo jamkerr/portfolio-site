@@ -23,7 +23,9 @@
     box-sizing: border-box;
 }
 
-body, header, footer {
+body,
+header,
+footer {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: var(--font-size-normal);
@@ -39,7 +41,11 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, button, .button {
+h1,
+h2,
+h3,
+button,
+.button {
     font-weight: var(--font-heavy);
 }
 
@@ -52,7 +58,11 @@ h2 {
 }
 
 /* RESET BROWSER DEFAULTS */
-input, texture, select, button, .button {
+input,
+texture,
+select,
+button,
+.button {
     /* takes the font from the outer container */
     font-family: inherit;
 }
@@ -83,13 +93,15 @@ a:active {
     padding:0 .25em
 }
 
-.fancy-link:hover, .fancy-link:focus {
+.fancy-link:hover,
+.fancy-link:focus {
     background-size:100% 100%;
     color: var(--text-color-light);
 }
 
 /* BUTTONS */
-button, .button {
+button,
+.button {
     /* overwrites browser defaults and resets the border */
     border: none;
     /* styles the background color, font color, and text decoration (underline, etc.) of the button */
@@ -104,14 +116,18 @@ button, .button {
     transition: 0.2s opacity;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
     /* lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
 }
 
-button:visited, .button:visited {
+button:visited,
+.button:visited {
     color: var(--secondary-color);
 }
 
@@ -154,7 +170,8 @@ button:visited, .button:visited {
 }
 
 /* Nav bar transition: Top and Bottom borders go out */
-.navigation-list__item:before, .navigation-list__item:after
+.navigation-list__item:before,
+.navigation-list__item:after
 {
     position: absolute;
     left: 0px;
@@ -178,13 +195,15 @@ button:visited, .button:visited {
     transform: translateY(-10px);
 }
 
-.navigation-list__item:hover:before, .navigation-list__item:hover:after
+.navigation-list__item:hover:before,
+.navigation-list__item:hover:after
 {
     opacity: 1;
     transform: translateY(0px);
 }
 
-.navigation-list__item--active:before, .navigation-list__item--active:after {
+.navigation-list__item--active:before,
+.navigation-list__item--active:after {
     opacity: 1;
     transform: translateY(0px);
 }
