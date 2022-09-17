@@ -96,23 +96,40 @@ input, texture, select, button, .button {
 /* LINKS */
 a {
     color: #a0a;
+    text-decoration: none;
 }
 
 a:visited {
     /* visited link */
-    color: #faf;
-}
-
-a:hover, a:focus {
-    /* No underlining when hovering over a link */
-    text-decoration: none;
+    color: #606;
 }
 
 a:active {
     /* selected link */
-    color: #606;
+    color: #2b2b2b;
 }
 
+.fancy-link {
+    /* background-image:linear-gradient(rgb(173, 119, 243),rgb(199, 21, 131)); */
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#a0a), to(#606));
+    background-image:linear-gradient(#a0a, #606);
+    background-size:100% .1em;
+    background-position:0 90%;
+    background-repeat:no-repeat;
+    -webkit-transition:all .3s ease-in;
+    transition:all .3s ease-in;
+    padding:0 .25em;
+}
+
+.fancy-link:hover {
+    background-size:100% 100%;
+    color: #f5f5f5;
+}
+
+.fancy-link:focus {
+    background-size:100% 100%;
+    color: #f5f5f5;
+}
 
 /* BUTTONS */
 button {
@@ -151,6 +168,14 @@ button:hover, button:focus, .button:hover, .button:focus {
     cursor: pointer;
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
+}
+
+button:visited {
+    color: #faf;
+}
+
+.button:visited {
+    color: #faf;
 }
 
 
@@ -302,6 +327,17 @@ main {
     margin: auto;
 }
 
+.contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+}
+
 .grid {
     display: -ms-grid;
     display: grid;
@@ -437,7 +473,3 @@ main {
         font-size: 24px;
     }
 }
-
-
-/* fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes
-fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}.animate__fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}@-webkit-keyframes */
