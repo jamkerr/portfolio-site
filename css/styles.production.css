@@ -195,6 +195,7 @@ button:visited {
     width: 100%;
     margin: auto;
     padding: 20px;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
