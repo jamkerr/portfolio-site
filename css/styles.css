@@ -345,5 +345,12 @@ main {
     h1 {
         font-size: var(--font-size-big);
     }
+    .profile__portrait {
+        float: none;
+    }
+    .profile {
+        text-align: center;
+        margin: auto;
+    }
 }
 
