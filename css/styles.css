@@ -237,6 +237,10 @@ button:visited,
     padding: 10px;
 }
 
+.contact-link-icon {
+    height: 150px;
+}
+
 /* MAIN CONTENT */
 main {
     flex: 1 0 auto;
@@ -271,7 +275,6 @@ main {
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    background-color: var(--secondary-color-lighter);
     background: linear-gradient(var(--background-light), var(--secondary-color-lighter));
     padding: 20px;
 }
@@ -299,9 +302,20 @@ main {
 
 .multilink-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+}
+
+.contact-link-div {
+    display: flex;
+    min-width: 270px;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    border: 8px solid var(--primary-color-darker);
+    padding: 20px;
 }
 
 /* ANIMATIONS */
