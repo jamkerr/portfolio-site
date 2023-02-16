@@ -93,7 +93,8 @@ texture {
 }
 
 a {
-    color: var(--primary-color)
+    color: var(--primary-color);
+    outline: 0
 }
 
 a:visited {

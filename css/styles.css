@@ -72,6 +72,7 @@ button,
 a {
     color: var(--primary-color);
     text-decoration: none;
+    outline: none;
 }
 
 a:visited {
