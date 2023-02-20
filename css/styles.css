@@ -144,7 +144,7 @@ button:focus,
 
 button:visited,
 .button:visited {
-    color: var(--secondary-color);
+    color: var(--secondary-color-lighter);
 }
 
 
@@ -268,9 +268,9 @@ main {
     max-width: 700px;
 }
 
-.about-me {
-    text-align: center;
-    margin: auto;
+.about-me__content {
+    text-align: left;
+    margin: 0 20%;
 }
 
 .contact {

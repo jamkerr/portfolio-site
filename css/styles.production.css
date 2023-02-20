@@ -29,7 +29,6 @@ body {
     -webkit-box-direction: normal
 }
 
-.about-me,
 .grid__item h1,
 .page-footer,
 .project-description p {
@@ -130,8 +129,13 @@ a {
     font-weight: 900
 }
 
+.button:visited,
+.fancy-header,
+button:visited {
+    color: var(--secondary-color-lighter)
+}
+
 .fancy-header {
-    color: var(--secondary-color-lighter);
     text-shadow: -1px -1px 0 var(--accent-color), 1px -1px 0 var(--accent-color), -1px 1px 0 var(--accent-color), 1px 1px 0 var(--accent-color)
 }
 
@@ -153,11 +157,6 @@ button:focus,
 button:hover {
     cursor: pointer;
     opacity: .8
-}
-
-.button:visited,
-button:visited {
-    color: var(--secondary-color)
 }
 
 .page-header {
@@ -285,8 +284,9 @@ main {
     max-width: 700px
 }
 
-.about-me {
-    margin: auto
+.about-me__content {
+    text-align: left;
+    margin: 0 20%
 }
 
 .contact {
