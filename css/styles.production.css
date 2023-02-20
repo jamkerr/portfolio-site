@@ -11,6 +11,11 @@ header {
     color: var(--text-color-dark)
 }
 
+.technology,
+a:visited {
+    color: var(--primary-color-darker)
+}
+
 .button,
 .navigation-list__item,
 a,
@@ -36,6 +41,7 @@ body {
     --primary-color-darker: #606;
     --secondary-color: #faf;
     --secondary-color-lighter: #fdf;
+    --accent-color: #d4d;
     --text-color-dark: #2b2b2b;
     --text-color-light: #f5f5f5;
     --background-light: #f5f5f5;
@@ -92,13 +98,14 @@ texture {
     font-family: inherit
 }
 
+.fancy-header,
+.technology {
+    font-family: "Space Mono", monospace
+}
+
 a {
     color: var(--primary-color);
     outline: 0
-}
-
-a:visited {
-    color: var(--primary-color-darker)
 }
 
 .fancy-link {
@@ -116,6 +123,16 @@ a:visited {
 .fancy-link:hover {
     background-size: 100% 100%;
     color: var(--text-color-light)
+}
+
+.technology {
+    font-size: 1.3rem;
+    font-weight: 900
+}
+
+.fancy-header {
+    color: var(--secondary-color-lighter);
+    text-shadow: -1px -1px 0 var(--accent-color), 1px -1px 0 var(--accent-color), -1px 1px 0 var(--accent-color), 1px 1px 0 var(--accent-color)
 }
 
 .button,
