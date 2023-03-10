@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>James Kerr - Case Study</title>
+    <meta name="description"
+        content="My name is James Kerr. I'm a web developer with a passion for interactive, data-driven communication.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.production.css?ver=1.0.3">
+</head>
+
+<body>
+    <!-- BEGIN HEADER AND NAVIGATION -->
+    <header class="page-header">
+        <a href="index.html" class="page-header__logo-link">
+            <img src="img/favicon/android-chrome-192x192.png" alt="Logo for James Kerr" class="page-header__item">
+        </a>
+        <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+                </li>
+                <li role="presentation">
+                    <a href="work.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item">Projects</a>
+                </li>
+                <li role="presentation">
+                    <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- END HEADER AND NAVIGATION -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main>
+        <section>
+            <div class="grid__item">
+                <h1 class="fancy-header" data-value="YMDB (React)">YMDB</h1>
+                <img class="project-screenshot"
+                    src="img/project-screenshots/screenshot-ymdb-react-main-movie-view.png" />
+                <div class="project-description">
+                    <h2>Beginning</h2>
+                    <p>
+                        Overview: YMDB (Your Movie DataBase) is a web app to search movies, view their details, and save them for later.
+                        It's kind of like IMDB but, well, not quite so big.
+                    </p>
+                    <p>
+                        Technical: It's a full-stack app - I built the backend and API using Node.js and Express, and created 2 separate frontends, one in React and one in Angular.
+                    </p>
+                    <p>
+                        The goal: I built YMDB as part of a full-stack web development program.
+                        I wanted a full-stack project where I could create my own API, and I also wanted to try out multiple frontend frameworks to compare them.
+                    </p>
+                    <h2>Middle</h2>
+                    <p>
+                        Step 1: I created a MongoDB database hosted on AtlasDB. 
+                    </p>
+                    <p>
+                        Step 2: I created an API to the database using Node.js and Express. Use Mongoose for ...? Used Morgan for ...?
+                    </p>
+                    <p>
+                        Step 3: I created a frontend using React. Used React Bootstrap for styling.
+                        Challenges: State management, especially for storing and updating a user's favorite movies between different views. I hasn't realised I was unneccessarily navigating between pages, which was clearing state each time. I used Redux Toolkit to gain visibility about this and solve the issue.
+                    </p>
+                    <p>
+                        Step 4: I created a frontend using Angular. Used Angular Material UI for styling.
+                        Challenges:
+                    </p>
+                    <h2>End</h2>
+                </div>
+                <div class="multilink-container">
+                    <a href="https://github.com/jamkerr/ymdb-client/" target="_blank"><img src="img/github_icon.svg"
+                            alt="Github logo"></a>
+                    <a href="https://ymdb.netlify.app/" class="fancy-link" target="_blank">YMDB (React)</a>
+                </div>
+                <div class="multilink-container">
+                    <a href="https://github.com/jamkerr/ymdb-angular-client/" target="_blank"><img src="img/github_icon.svg"
+                            alt="Github logo"></a>
+                    <a href="https://jamkerr.github.io/ymdb-angular-client/" class="fancy-link" target="_blank">YMDB
+                        (Angular)</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- END MAIN CONTENT -->
+
+    <!-- BEGIN FOOTER -->
+    <footer class="page-footer">
+        <div class="social-media">
+            <p class="social-media__text">Find me on:</p>
+            <a href="https://github.com/jamkerr/" target="_blank"><img src="img/github_icon.svg" alt="Github logo"></a>
+            <a href="https://www.linkedin.com/in/james-a-kerr/" target="_blank"><img src="img/linkedin_icon.svg"
+                    alt="LinkedIn logo"></a>
+        </div>
+        <div>
+            <a class="impressum-link" href="impressum.html">Impressum (Legal Notice)</a>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+
+    <!-- <script src="js/tota11y.min.js"></script> -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
