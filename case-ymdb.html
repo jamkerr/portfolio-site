@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="css/styles.production.css?ver=1.0.3">
+    <link rel="stylesheet" type="text/css" href="css/styles.css?ver=1.0.3">
 </head>
 
 <body>
@@ -51,50 +51,112 @@
     <!-- BEGIN MAIN CONTENT -->
     <main>
         <section>
-            <div class="grid__item">
-                <h1 class="fancy-header" data-value="YMDB (React)">YMDB</h1>
-                <img class="project-screenshot"
-                    src="img/project-screenshots/screenshot-ymdb-react-main-movie-view.png" />
-                <div class="project-description">
-                    <h2>Beginning</h2>
+            <div class="grid__item case-content">
+                <h1>Case study for <span class="fancy-header" data-value="YMDB">YMDB</span></h1>
+                <img class="case-screenshot" src="img/project-screenshots/screenshot-ymdb-react-main-movie-view.png" />
+                <div>
+                    <h2>Overview</h2>
+                    <h3>What is YMDB?</h3>
                     <p>
-                        Overview: YMDB (Your Movie DataBase) is a web app to search movies, view their details, and save them for later.
+                        YMDB (which stand for Your Movie DataBase) is a web app to search movies, view their details, and save them for later.
                         It's kind of like IMDB but, well, not quite so big.
                     </p>
+                    <h3>What's it built with?</h3>
                     <p>
-                        Technical: It's a full-stack app - I built the backend and API using Node.js and Express, and created 2 separate frontends, one in React and one in Angular.
+                        YMDB is a full-stack app - I built the backend and API using Node.js and Express, and created 2 separate frontends, one in React and one in Angular.
                     </p>
+                    <h3>Why?</h3>
                     <p>
-                        The goal: I built YMDB as part of a full-stack web development program.
+                        I built YMDB as part of a full-stack web development program.
                         I wanted a full-stack project where I could create my own API, and I also wanted to try out multiple frontend frameworks to compare them.
                     </p>
-                    <h2>Middle</h2>
+                    <h2>Process</h2>
+                    <h3>Backend and API</h3>
                     <p>
-                        Step 1: I created a MongoDB database hosted on AtlasDB. 
+                        I started by creating a MongoDB database, filling it with some hardcoded data on a few of my favorite movies, and then hosting it on MongoDB Atlas. 
                     </p>
                     <p>
-                        Step 2: I created an API to the database using Node.js and Express. Use Mongoose for ...? Used Morgan for ...?
+                        I then created an API to the database with Node.js and Express, using Mongoose for the data model. I deployed the API on Heroku.
                     </p>
                     <p>
-                        Step 3: I created a frontend using React. Used React Bootstrap for styling.
-                        Challenges: State management, especially for storing and updating a user's favorite movies between different views. I hasn't realised I was unneccessarily navigating between pages, which was clearing state each time. I used Redux Toolkit to gain visibility about this and solve the issue.
+                        Head to my GitHub to take a look at the <a href="https://github.com/jamkerr/movie_api/" class="fancy-link" target="_blank">code for this API</a>.
+                    </p>
+                    
+                    <h3>Frontend in React</h3>
+                    <p>
+                        I created the first frontend for YMDB as an SPA in React, using React Bootstrap for the UI styling.
+                        I created sign in and registration pages, using JWTs for user authetication.
+                        The main view shows a searchable list of movies, and you can click through to see more info about a movie, director, or genre.
+                        You can also add a movie to your favorites by pressing a heart button.
+                        Finally, I created a profile view, where you can update your user info, and also see a list of your favorite movies.
+                    </p>
+                    <div class="case-challenge-box">
+                        <h4>Challenge</h4>
+                        <p>
+                            At this point, I was faced with the challenge of state management for the first time, specifically for storing and updating a user's favorite movies between different views.
+                            Because the heart button changes based on whether a movie is a favorite or not (the heart is filled when a movie is a favorite, and empty when it's not), a user's favorite movie data needs to be available in multiple places: the main view, a specific movie view, and the profile view.
+                            The info also has to be sent to the server so that next time a user signs in, they see the correct favorite movie info.
+                        </p>
+                        <p>
+                            Coordinating this data proved challening without state management.
+                            Because this was my first time working with SPA development and state management, I made a big mistake by unneccessarily navigating between pages, instead of using proper SPA practices.
+                            This cleared the state each time a suer navigated to a different page, and was invisible to me until I used Redux Toolkit to gain visibility about this issue.
+                            As soon as I could see what was going on, I could investigate it and fix it.
+                        </p>
+                    </div>
+                    <p>
+                        Head to my GitHub to take a look at the <a href="https://github.com/jamkerr/ymdb-client/" class="fancy-link"
+                            target="_blank">code for the React frontend</a>, where you can also find a live version of the app.
+                    </p>
+
+                    <h3>Frontend in Angular</h3>
+                    <p>
+                        I created a second frontend for YMDB with Angular, using Angular Material UI for styling.
+                        I did this to learn a new frontend framework (Angular), and to compare it to React.
                     </p>
                     <p>
-                        Step 4: I created a frontend using Angular. Used Angular Material UI for styling.
-                        Challenges:
+                        This frontend contains all the same views as the React version, with some minor but significant differences.
+                        Instead of a search field in the main view, I included a filter for favorite movies.
+                        This way, users can see thir favorite movies in the main view, rather than needing to navigate to their profile.
+                        In my opinion, this makes it easeier for users to find and interact with their favorite movies.
+                        I also created modals for the movie, director, and genre information, instead of creating separate views for them.
                     </p>
-                    <h2>End</h2>
-                </div>
-                <div class="multilink-container">
-                    <a href="https://github.com/jamkerr/ymdb-client/" target="_blank"><img src="img/github_icon.svg"
-                            alt="Github logo"></a>
-                    <a href="https://ymdb.netlify.app/" class="fancy-link" target="_blank">YMDB (React)</a>
-                </div>
-                <div class="multilink-container">
-                    <a href="https://github.com/jamkerr/ymdb-angular-client/" target="_blank"><img src="img/github_icon.svg"
-                            alt="Github logo"></a>
-                    <a href="https://jamkerr.github.io/ymdb-angular-client/" class="fancy-link" target="_blank">YMDB
-                        (Angular)</a>
+                    <p>
+                        The combination of these differences had the side effect that state management wasn't such an issue in this version of the app, since there wasn't a need to coordinate favorite movie info across different parts of the app.
+                    </p>
+                    <p>
+                        Head to my GitHub to take a look at the <a href="https://github.com/jamkerr/ymdb-angular-client/" class="fancy-link"
+                            target="_blank">code for the Angular frontend</a>, where you can also find a live version of the app.
+                    </p>
+                    <h2>Summary</h2>
+                    <h3>What did I learn?</h3>
+                    <p>
+                        This project gave me a great intro to full-stack development, from creating a database and defining an API, to constructing an intuitive UI to interact with that data.
+                    </p>
+                    <p>
+                        If I were to do this project again, I'd avoid Bootstrap for styling, since I find it inflexible at times. I used Tailwindcss in more recent projects and have been happy with it, so I'd try that out.
+                    </p>
+                    <p>
+                        And I would definitely be thinking about state management from the beginning!
+                    </p>
+                    <h3>Links</h3>
+                    <div class="case-link-box">
+                        <h4>API</h4>
+                        <a href="https://github.com/jamkerr/movie_api/" target="_blank"><img src="img/github_icon.svg"
+                                alt="Github logo">API code</a>
+                    </div>
+                    <div class="case-link-box">
+                        <h4>React Frontend:</h4>
+                        <a href="https://github.com/jamkerr/ymdb-client/" target="_blank"><img src="img/github_icon.svg"
+                                alt="Github logo">React code</a>
+                        <a href="https://ymdb.netlify.app/" target="_blank">Live React app</a>
+                    </div>
+                    <div class="case-link-box">
+                        <h4>Angular Frontend:</h4>
+                        <a href="https://github.com/jamkerr/ymdb-angular-client/" target="_blank"><img src="img/github_icon.svg"
+                                alt="Github logo">Angular code</a>
+                        <a href="https://jamkerr.github.io/ymdb-angular-client/" target="_blank">Live Angular app</a>
+                    </div>
                 </div>
             </div>
         </section>
