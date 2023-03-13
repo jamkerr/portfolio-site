@@ -272,9 +272,9 @@ button:hover {
 
 .contact-link-div,
 .grid__item {
+    padding: 20px;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    padding: 20px
+    -webkit-box-direction: normal
 }
 
 .contact-link-icon {
@@ -386,6 +386,59 @@ main {
     -ms-flex-align: center;
     align-items: center;
     border: 8px solid var(--primary-color-darker)
+}
+
+.case-screenshot {
+    width: 100%;
+    max-width: 800px
+}
+
+figcaption {
+    font-size: 1rem
+}
+
+.case-content {
+    padding: 0 100px 20px
+}
+
+.case-challenge-box {
+    border: 4px solid #faf;
+    padding: 0 20px
+}
+
+.case-link-box-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 1rem 4rem;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.case-link-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.link-box-heading {
+    margin-bottom: 0
+}
+
+.inline-icon {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 1.2rem
 }
 
 @-webkit-keyframes color-change {
@@ -517,5 +570,9 @@ main {
     .profile {
         text-align: center;
         margin: auto
+    }
+
+    .case-content {
+        padding: 20px
     }
 }

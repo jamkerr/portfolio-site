@@ -347,6 +347,10 @@ main {
     max-width: 800px;
 }
 
+figcaption {
+    font-size: 1rem;
+}
+
 .case-content {
     padding: 0px 100px 20px;
 }
@@ -356,9 +360,27 @@ main {
     padding: 0px 20px;
 }
 
+.case-link-box-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem 4rem;
+    flex-wrap: wrap;
+}
+
 .case-link-box {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+.link-box-heading {
+    margin-bottom: 0;
+}
+
+.inline-icon {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 1.2rem;
 }
 
 /* ANIMATIONS */

@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css?ver=1.0.3">
+    <link rel="stylesheet" type="text/css" href="css/styles.production.css?ver=1.0.3">
 </head>
 
 <body>
@@ -53,7 +53,10 @@
         <section>
             <div class="grid__item case-content">
                 <h1>Case study for <span class="fancy-header" data-value="YMDB">YMDB</span></h1>
-                <img class="case-screenshot" src="img/project-screenshots/screenshot-ymdb-react-main-movie-view.png" />
+                <figure>
+                    <img class="case-screenshot" src="img/project-screenshots/screenshot-ymdb-react-main-movie-view.png" alt="Screenshot of the React version of the YMDB app's movie list view" />
+                    <figcaption>YMDB frontend built with React</figcaption>
+                </figure>
                 <div>
                     <h2>Overview</h2>
                     <h3>What is YMDB?</h3>
@@ -90,17 +93,32 @@
                         You can also add a movie to your favorites by pressing a heart button.
                         Finally, I created a profile view, where you can update your user info, and also see a list of your favorite movies.
                     </p>
+                    <figure>
+                        <img class="case-screenshot" src="img/project-screenshots/screenshot-ymdb-react-profile-and-favorites.png"
+                            alt="Screenshot of the React version of the YMDB app's profile view, showing a user's favorite movies" />
+                        <figcaption>Profile view of YMDB (React version) showing a user's favorite movies</figcaption>
+                    </figure>
                     <div class="case-challenge-box">
-                        <h4>Challenge</h4>
+                        <h4>State was hard! (but Redux is great)</h4>
                         <p>
                             At this point, I was faced with the challenge of state management for the first time, specifically for storing and updating a user's favorite movies between different views.
-                            Because the heart button changes based on whether a movie is a favorite or not (the heart is filled when a movie is a favorite, and empty when it's not), a user's favorite movie data needs to be available in multiple places: the main view, a specific movie view, and the profile view.
+                            Because the heart button changes based on whether a movie is a favorite or not (the heart is filled when a movie is a favorite 
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="inline-icon">
+                                <path
+                                    d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+                            </svg>
+                            and empty when it's not
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="inline-icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                            ) a user's favorite movie data needs to be available in multiple places: the main view, a specific movie view, and the profile view.
                             The info also has to be sent to the server so that next time a user signs in, they see the correct favorite movie info.
                         </p>
                         <p>
-                            Coordinating this data proved challening without state management.
+                            Coordinating this data proved challenging without state management.
                             Because this was my first time working with SPA development and state management, I made a big mistake by unneccessarily navigating between pages, instead of using proper SPA practices.
-                            This cleared the state each time a suer navigated to a different page, and was invisible to me until I used Redux Toolkit to gain visibility about this issue.
+                            This cleared the state each time a user navigated to a different page, and was invisible to me until I used Redux Toolkit to gain visibility about this issue.
                             As soon as I could see what was going on, I could investigate it and fix it.
                         </p>
                     </div>
@@ -119,6 +137,13 @@
                         Instead of a search field in the main view, I included a filter for favorite movies.
                         This way, users can see thir favorite movies in the main view, rather than needing to navigate to their profile.
                         In my opinion, this makes it easeier for users to find and interact with their favorite movies.
+                    </p>
+                    <figure>
+                        <img class="case-screenshot" src="img/project-screenshots/screenshot-ymdb-angular-my-favorites.png"
+                            alt="Screenshot of the Angular version of the YMDB app's movie list view, showing a user's favorite movies" />
+                        <figcaption>The Angular version of YMDB, with the favorite movies filter turned on</figcaption>
+                    </figure>
+                    <p>
                         I also created modals for the movie, director, and genre information, instead of creating separate views for them.
                     </p>
                     <p>
@@ -134,28 +159,27 @@
                         This project gave me a great intro to full-stack development, from creating a database and defining an API, to constructing an intuitive UI to interact with that data.
                     </p>
                     <p>
-                        If I were to do this project again, I'd avoid Bootstrap for styling, since I find it inflexible at times. I used Tailwindcss in more recent projects and have been happy with it, so I'd try that out.
+                        If I were to do this project again, I'd avoid Bootstrap for styling, since I find it inflexible at times. I used Tailwind CSS in more recent projects and have been happy with it, so I'd try that out.
                     </p>
                     <p>
                         And I would definitely be thinking about state management from the beginning!
                     </p>
                     <h3>Links</h3>
-                    <div class="case-link-box">
-                        <h4>API</h4>
-                        <a href="https://github.com/jamkerr/movie_api/" target="_blank"><img src="img/github_icon.svg"
-                                alt="Github logo">API code</a>
-                    </div>
-                    <div class="case-link-box">
-                        <h4>React Frontend:</h4>
-                        <a href="https://github.com/jamkerr/ymdb-client/" target="_blank"><img src="img/github_icon.svg"
-                                alt="Github logo">React code</a>
-                        <a href="https://ymdb.netlify.app/" target="_blank">Live React app</a>
-                    </div>
-                    <div class="case-link-box">
-                        <h4>Angular Frontend:</h4>
-                        <a href="https://github.com/jamkerr/ymdb-angular-client/" target="_blank"><img src="img/github_icon.svg"
-                                alt="Github logo">Angular code</a>
-                        <a href="https://jamkerr.github.io/ymdb-angular-client/" target="_blank">Live Angular app</a>
+                    <div class="case-link-box-wrapper">
+                        <div class="case-link-box">
+                            <h4 class="link-box-heading">API:</h4>
+                            <a href="https://github.com/jamkerr/movie_api/" target="_blank" class="fancy-link">API code</a>
+                        </div>
+                        <div class="case-link-box">
+                            <h4 class="link-box-heading">React Frontend:</h4>
+                            <a href="https://github.com/jamkerr/ymdb-client/" target="_blank" class="fancy-link">React code</a>
+                            <a href="https://ymdb.netlify.app/" target="_blank" class="fancy-link">Live React app</a>
+                        </div>
+                        <div class="case-link-box">
+                            <h4 class="link-box-heading">Angular Frontend:</h4>
+                            <a href="https://github.com/jamkerr/ymdb-angular-client/" target="_blank" class="fancy-link">Angular code</a>
+                            <a href="https://jamkerr.github.io/ymdb-angular-client/" target="_blank" class="fancy-link">Live Angular app</a>
+                        </div>
                     </div>
                 </div>
             </div>
