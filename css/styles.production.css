@@ -296,7 +296,7 @@ main {
 
 .about-me__content {
     text-align: left;
-    margin: 0 20%
+    margin: 0 20% 5rem
 }
 
 .contact {
@@ -431,14 +431,24 @@ figcaption {
     align-items: flex-start
 }
 
+.download-icon,
+.inline-icon {
+    display: inline-block;
+    max-height: 1.2rem
+}
+
 .link-box-heading {
     margin-bottom: 0
 }
 
 .inline-icon {
-    display: inline-block;
-    vertical-align: middle;
-    max-height: 1.2rem
+    vertical-align: middle
+}
+
+.download-icon {
+    position: relative;
+    top: .1rem;
+    left: -.2rem
 }
 
 @-webkit-keyframes color-change {
@@ -574,5 +584,9 @@ figcaption {
 
     .case-content {
         padding: 20px
+    }
+
+    .about-me__content {
+        margin-inline: 10%
     }
 }
